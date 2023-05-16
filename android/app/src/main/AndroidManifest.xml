@@ -8,9 +8,7 @@
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
 
-       <activity android:name=".PrinterGetnet"
-           ></activity>
-
+        <activity android:name=".PrinterGetnet" android:parentActivityName=".MainActivity"  android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

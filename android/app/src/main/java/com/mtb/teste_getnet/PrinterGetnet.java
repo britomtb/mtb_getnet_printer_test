@@ -1,25 +1,20 @@
 package com.mtb.teste_getnet;
-
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.RemoteException;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.getnet.posdigital.PosDigital;
 import com.getnet.posdigital.printer.AlignMode;
 import com.getnet.posdigital.printer.FontFormat;
 import com.getnet.posdigital.printer.IPrinterCallback;
 
-public class PrinterGetnet extends Activity {
+public class PrinterGetnet extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                connectPosDigitalService();
-            }
-        }).start();
+        new Thread(() -> connectPosDigitalService()).start();
     }
 
     @Override

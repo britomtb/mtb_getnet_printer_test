@@ -21,7 +21,7 @@ public class MainActivity extends FlutterActivity {
                     resultActivity = result;
                     switch (call.method) {
                         case "TESTE_PRINTER":
-                            startActivity(new Intent(getContext(), PrinterGetnet.class));
+                            startActivityForResult(new Intent(getContext(), PrinterGetnet.class),REQUEST_TEST_PRINTER );
                             break;
                     }
                 });
